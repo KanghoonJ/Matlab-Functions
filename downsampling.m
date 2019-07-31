@@ -1,12 +1,7 @@
 function Downsampled_TS = downsampling(TS,Exp_Timestamp,Imaging_Timestamp)
 
-% Test
-% TS = Speed;
-% Exp_Timestamp = Scaled_Raw_Timestamp;
 Downsampled_TS = [];
-% Downsampled_TS(:,1) = Imaging_Timestamp;
 Nframes = length(Imaging_Timestamp);
-% Downsampled_TS(1,1) = 1;
 for(i=1:Nframes)
     if(i==1)
         Time_range = [0, mean([Imaging_Timestamp(1,1), Imaging_Timestamp(2,1)])];
